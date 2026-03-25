@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sudarshan-chakra"
+version = "0.2.0"
+description = "Sudarshan Chakra SDK for AI agent security"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [
+    { name = "Sudarshan Chakra Team" }
+]
+keywords = ["ai", "security", "firewall", "pii", "redaction", "audit", "llm"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security",
+    "Topic :: Software Development :: Libraries",
+]
+dependencies = [
+    "numpy>=1.24",
+    "ff3==1.0.3",
+    "pydantic>=2.0",
+    "pydantic-settings>=2.0",
+    "python-dotenv>=1.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "build>=1.2",
+    "twine>=5.1",
+    "pytest>=8.0"
+]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["sudarshan_chakra", "sudarshan_chakra.*"]
+
+[tool.setuptools.package-data]
+sudarshan_chakra = [
+    "artifacts/*.joblib",
+    "artifacts/aegis_redactor/*.json",
+    "artifacts/aegis_redactor/*.safetensors"
+]

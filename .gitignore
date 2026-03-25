@@ -1,0 +1,54 @@
+__pycache__/
+*.pyc
+.venv/
+.venv313/
+.env
+.env.*
+!.env.example
+.python-version
+
+# Local databases and caches
+*.db
+*.sqlite
+*.sqlite3
+.pytest_cache/
+
+# Secrets and private keys
+*.wc
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Training data and model artifacts (keep private)
+*.joblib
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+*.onnx
+*.csv
+*.jsonl
+
+# Runtime artifacts
+logs/
+*.log
+
+# Demo/media binaries
+*.mp4
+*.mov
+*.avi
+*.pdf
+
+# IDE
+.vscode/
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
+# Legacy
+sentinel_b_model.joblib
+private_key.wc
+
